@@ -1,7 +1,9 @@
 import BootstrapTable from 'react-bootstrap-table-next'
+import obj from '../Bandar/awara'
 var createData = require('./services')
 // var BootstrapTable = require('react-bootstrap-table-next')
 
+console.log(obj)
 var React = require('react')
 const column = [{
     dataField: 'id',
@@ -18,16 +20,31 @@ const column = [{
     text: 'Product Price'
 }
 ]
-const products = createData(20)
+const indicator = function(){
+    return 'Something is here!! '
+}
+const products = createData(10)
+
+const productsData = function(){
+    console.log(products)
+    return products   
+}
+
 class Badho extends React.Component{
     render(){
         return(
             <BootstrapTable
               keyField='id'
-              data = {products}
+            //   Failed prop type: Invalid prop `data` of type `function` supplied to `DataProvider`, expected `array`.
+            //   data = {productsData}
               columns = {column}
+              data = {products}
               striped // For zebra striping
-              border
+              //border 
+              condensed
+              bordered = {false}
+            //   noDataIndication = 'Table is empty'
+            noDataIndication = {indicator}
             >
             </BootstrapTable>
         )
