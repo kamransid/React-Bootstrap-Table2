@@ -5,7 +5,9 @@ import './index.css';
 // import App from './Table'
 
 // import App from './Table/bachcha'
-import App from './Table/tableWithCaption'
+//import App from './Table/tableWithCaption'
+// import App from './Table/pagination'
+import App from './Table/pagination2'
 
 import * as serviceWorker from './serviceWorker';
 
